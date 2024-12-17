@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homenagem</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #fff0f5; /* Fundo fofinho */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100vh;
+            margin: 0;
+            text-align: center;
+            font-family: 'Arial', sans-serif;
+            color: #d6336c;
+        }
+
+        /* Coração animado maior (2.5x) */
+        .heart {
+            width: 250px; /* Ajuste para diminuir o tamanho */
+            height: 250px; /* Ajuste para diminuir o tamanho */
+            background-color: #ff69b4;
+            position: absolute;
+            transform: rotate(-45deg);
+            animation: heartbeat 1.5s infinite ease-in-out;
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+            margin-bottom: 20px;
+        }
+
+        .heart::before, .heart::after {
+            content: "";
+            width: 250px; /* Ajuste para diminuir o tamanho */
+            height: 250px; /* Ajuste para diminuir o tamanho */
+            background-color: #ff69b4;
+            position: absolute;
+            border-radius: 50%;
+        }
+
+        .heart::before {
+            top: -125px; /* Ajustado */
+            left: 0;
+        }
+
+        .heart::after {
+            top: 0;
+            left: 125px; /* Ajustado */
+        }
+
+        .heart-image {
+            position: relative;
+            z-index: 5;
+        }
+
+        @keyframes heartbeat {
+            0%, 100% {
+                transform: scale(1) rotate(-45deg);
+            }
+            50% {
+                transform: scale(1.1) rotate(-45deg);
+            }
+        }
+
+        .message {
+            font-size: 1.2rem; /* Reduzindo o tamanho da fonte */
+            font-weight: bold;
+            color: #ff1493;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+            margin-top: 63px; /* Ajuste na margem superior */
+            z-index: 5;
+            max-width: 40%; /* Ajusta a largura para não ficar muito longa */
+            line-height: 1.4; /* Melhorando o espaçamento entre as linhas */
+            margin-bottom: 45px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <!-- Coração animado -->
+        <div class="heart"></div>
+
+        <!-- Imagem clicável com formato de coração -->
+        <img src="projetocarta.png" height="250" width="250" class="heart-image"></img>
+    </div>
+
+    <!-- Mensagem romântica -->
+    <div class="message">
+        Oiii, gatinha! 😊 Tudo bem? Espero que tenha gostado do presente que fiz. Deu um pouquinho de trabalho, mas não dá pra dizer que não fui criativo, né? 😂 Muito obrigado por tudo, viu? Por ter entrado na minha vida nesse finzinho de ano e me feito mais feliz. Você já é o meu melhor presente de Natal.
+
+        Feliz Natal! 🎄 Beijinho, te amo. ❤️
+    </div>
+</body>
+</html>
