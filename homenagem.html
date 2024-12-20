@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <style>
         body {
-            background-color: #fff0f5; /* Fundo fofinho */
+            background-color: #fff0f5;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -19,10 +19,9 @@
             color: #d6336c;
         }
 
-        /* Coração animado maior (2.5x) */
         .heart {
-            width: 250px; /* Ajuste para diminuir o tamanho */
-            height: 250px; /* Ajuste para diminuir o tamanho */
+            width: 200px;
+            height: 200px;
             background-color: #ff69b4;
             position: absolute;
             transform: rotate(-45deg);
@@ -33,21 +32,21 @@
 
         .heart::before, .heart::after {
             content: "";
-            width: 250px; /* Ajuste para diminuir o tamanho */
-            height: 250px; /* Ajuste para diminuir o tamanho */
+            width: 200px;
+            height: 200px;
             background-color: #ff69b4;
             position: absolute;
             border-radius: 50%;
         }
 
         .heart::before {
-            top: -125px; /* Ajustado */
+            top: -100px;
             left: 0;
         }
 
         .heart::after {
             top: 0;
-            left: 125px; /* Ajustado */
+            left: 100px;
         }
 
         .heart-image {
@@ -65,15 +64,48 @@
         }
 
         .message {
-            font-size: 1.2rem; /* Reduzindo o tamanho da fonte */
+            font-size: 1rem;
             font-weight: bold;
             color: #ff1493;
             text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
-            margin-top: 63px; /* Ajuste na margem superior */
+            margin-top: 50px;
             z-index: 5;
-            max-width: 40%; /* Ajusta a largura para não ficar muito longa */
-            line-height: 1.4; /* Melhorando o espaçamento entre as linhas */
-            margin-bottom: 45px;
+            max-width: 90%;
+            line-height: 1.4;
+            margin-bottom: 30px;
+        }
+
+        @media (min-width: 412px) and (max-width: 896px) {
+            body {
+                padding: 10px;
+            }
+
+            .heart {
+                width: 150px;
+                height: 150px;
+            }
+
+            .heart::before, .heart::after {
+                width: 150px;
+                height: 150px;
+            }
+
+            .heart::before {
+                top: -75px;
+            }
+
+            .heart::after {
+                left: 75px;
+            }
+
+            .message {
+                font-size: 0.9rem;
+            }
+
+            .heart-image {
+                width: 150px;
+                height: 150px;
+            }
         }
     </style>
 </head>
@@ -83,7 +115,7 @@
         <div class="heart"></div>
 
         <!-- Imagem clicável com formato de coração -->
-        <img src="projetocarta.png" height="250" width="250" class="heart-image"></img>
+        <img src="projetocarta.png" height="200" width="200" class="heart-image"></img>
     </div>
 
     <!-- Mensagem romântica -->
